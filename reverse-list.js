@@ -25,16 +25,16 @@ function postOrderListTraversal(node) {
     }
 }
 
-function preOrderListTraversal(node) {
+function inOrderListTraversal(node) {
     if(node !== null) {
         console.log(node.data);
 
-        preOrderListTraversal(node.next);
+        inOrderListTraversal(node.next);
     }
 }
 
-postOrderListTraversal(node1);
+// postOrderListTraversal(node1);
 
-// preOrderListTraversal(node1);
+inOrderListTraversal(node1);
 
 
