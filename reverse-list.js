@@ -19,10 +19,13 @@ node4.next = node5;
 function postOrderListTraversal(node) {
     if(node !== null) {
         postOrderListTraversal(node.next);
-        
+
+        node.next.next = node;
+
         console.log(node.data);
-        
     }
+
+    return node;
 }
 
 function inOrderListTraversal(node) {
@@ -31,10 +34,12 @@ function inOrderListTraversal(node) {
 
         inOrderListTraversal(node.next);
     }
+
+    return node;
 }
 
 // postOrderListTraversal(node1);
 
-inOrderListTraversal(node1);
+let newHead = inOrderListTraversal(node1);
 
-
+console.log(newHead);
